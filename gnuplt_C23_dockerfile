@@ -1,0 +1,14 @@
+FROM dorowu/ubuntu-desktop-lxde-vnc:latest
+
+RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
+
+RUN apt-get update && apt-get upgrade -y
+
+RUN apt-get install -y vim less wget git gnuplot g++
+
+RUN cd /root
+
+RUN wget https://apt.llvm.org/llvm.sh  && chmod +x llvm.sh
+
+RUN ./llvm.sh 15
+
