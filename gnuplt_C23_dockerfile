@@ -1,10 +1,12 @@
 # this is the Dockerfile to build a GUI environment.
 # Thanks for https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/
+# Built image is here
+# https://hub.docker.com/r/erdespiro/ubuntu_gnuplt
 
 # As follows , it's installed vim , less , wget , git , gnuplot , g++.
 
-# when you try to run this container , you have to map any port to 80;
-# in the other word you have to specify option -p <any port you like>:80
+# when you try to run this container , you have to map port 6080 to 80;
+# in the other word you have to specify option -p 6080:80
 
 # After running , you can access container , if you Browse http://127.0.0.1:6080/ 
 
