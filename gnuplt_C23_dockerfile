@@ -1,3 +1,25 @@
+# this is the Dockerfile to build a GUI environment.
+# Thanks for https://hub.docker.com/r/dorowu/ubuntu-desktop-lxde-vnc/
+
+# As follows , it's installed vim , less , wget , git , gnuplot , g++.
+
+# when you try to run this container , you have to map any port to 80;
+# in the other word you have to specify option -p <any port you like>:80
+
+# After running , you can access container , if you Browse http://127.0.0.1:6080/ 
+
+# It covers C++23
+
+# if you want to compile C++ source code as C++23
+# you can execute command that clang-15 -std=c++23 <filename>
+
+# Attention!!
+# when you stop the container runned by this Dockerfile,
+# you should remove file /tmp/.X11-unix/X1
+# unless you cannot run same container next time.
+
+
+
 FROM dorowu/ubuntu-desktop-lxde-vnc:latest
 
 RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
